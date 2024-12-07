@@ -39,7 +39,7 @@ class App:
 
     def add_webcam(self, label):
         if 'cap' not in self.__dict__:
-            self.cap = cv2.VideoCapture(2)
+            self.cap = cv2.VideoCapture(0)
 
         self._label = label
         self.process_webcam()
@@ -60,7 +60,7 @@ class App:
 
         label = test(
                 image=self.most_recent_capture_arr,
-                model_dir='/home/phillip/Desktop/todays_tutorial/27_face_recognition_spoofing/code/face-attendance-system/Silent-Face-Anti-Spoofing/resources/anti_spoof_models',
+                model_dir='/Users/majaeger03/Desktop/GitHub/Simple-Facial-Recognition-and-Liveness-Detection/face-attendance-system/Silent-Face-Anti-Spoofing/resources/anti_spoof_models',
                 device_id=0
                 )
 
@@ -77,13 +77,13 @@ class App:
                     f.close()
 
         else:
-            util.msg_box('Hey, you are a spoofer!', 'You are fake !')
+            util.msg_box('Hey, you are a spoofer!', 'You are fake!')
 
     def logout(self):
 
         label = test(
                 image=self.most_recent_capture_arr,
-                model_dir='/home/phillip/Desktop/todays_tutorial/27_face_recognition_spoofing/code/face-attendance-system/Silent-Face-Anti-Spoofing/resources/anti_spoof_models',
+                model_dir='/Users/majaeger03/Desktop/GitHub/Simple-Facial-Recognition-and-Liveness-Detection/face-attendance-system/Silent-Face-Anti-Spoofing/resources/anti_spoof_models',
                 device_id=0
                 )
 

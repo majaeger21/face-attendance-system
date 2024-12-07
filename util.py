@@ -3,8 +3,8 @@ import pickle
 
 import tkinter as tk
 from tkinter import messagebox
+from tkinter import ttk
 import face_recognition
-
 
 def get_button(window, text, color, command, fg='white'):
     button = tk.Button(
@@ -19,7 +19,6 @@ def get_button(window, text, color, command, fg='white'):
                         width=20,
                         font=('Helvetica bold', 20)
                     )
-
     return button
 
 
